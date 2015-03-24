@@ -12,7 +12,7 @@
     <%= task.description %> |
     <%= link_to "Edit", edit_list_task_path(@list, task) %> |
     <%= link_to "Delete", list_task_path(@list, task),
-                          :data => { :confirm =>"Are you sure?",
+                          :data => {:confirm =>"You sure?",
                             :method => "delete"} %>
   </li>
 
@@ -38,10 +38,11 @@
       <%= task.description %>
       <%= link_to "Edit", edit_list_task_path(@list, task) %> |
       <%= link_to "Delete", list_task_path(@list, task),
-                            :data => { :confirm => "You sure?",
+                            :data => {:confirm => "You sure?",
                               :method => "delete"} %>
     </li>
   </ul>
+  <% end %>
 
 
 <p><%= link_to "Return to lists", lists_path %></p>
@@ -50,4 +51,4 @@
 <p><%= link_to "Add a task", new_list_task_path(@list) %></p>
 <p><%= link_to "Delete List", list_path(@list),
                               :data => {:confirm => "Are you sure?",
-                                :method => "delete"} %></p>
+                                  :method => "delete"} %></p>
