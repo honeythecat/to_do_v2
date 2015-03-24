@@ -42,7 +42,6 @@ class ListsController < ApplicationController
     redirect_to lists_path
     flash[:alert] = "List deleted!"
   end
-end
 
 private
   def list_params
