@@ -24,6 +24,7 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
     if @task.update(params[:task])
+      flash[:notice] = "Task edited successfully!"
       redirect_to list_path(@task.list)
     else
       render :edit
